@@ -5,9 +5,9 @@ import java.util.Random;
 public class Conto {
 
     //ATTRIBUTI
-    int accountNumber;
-    String ownerName;
-    double balance;
+    private int accountNumber;
+    private String ownerName;
+    private double balance;
 
     //COSTRUTTORE
     public Conto(String ownerName) {
@@ -51,11 +51,11 @@ public class Conto {
     /*Metodo per prelevare denaro dal conto solo se
      il saldo è maggiore del prelievo*/
     public void withdrawMoney(double withdrawal){
-        if (balance > withdrawal){
+        if (balance > withdrawal && withdrawal > 0){
             this.balance = balance - withdrawal;
             System.out.println(this.balance);
         }else {
-            System.out.println("Non ci sono abbastanza fondi nel conto");
+            System.out.println("Non ci sono fondi  nel conto o l'importo è <=0");
         }
     }
 
