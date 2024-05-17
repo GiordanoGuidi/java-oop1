@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
 
         Prodotto product1 = new Prodotto(3,"pippo","smart tv",599.99,12345678);
-
-        System.out.println(product1);
+        //Stampo l'oggetto completo
+        System.out.println("Oggetto completo" + " " + product1);
         //Stampo il codice del prodotto
         System.out.println("Codice prodotto" + " " + product1.getCode());
         //Stampo il prezzo base
@@ -16,5 +16,6 @@ public class Main {
         System.out.println("Nome completo" + " " + product1.getFullName());
 
 
+        Conto conto1 = new Conto(123,"pippo",10);
     }
 }
