@@ -3,7 +3,7 @@ package org.learning;
 public class Main {
     public static void main(String[] args) {
 
-        Prodotto product1 = new Prodotto(3,"pippo","smart tv",599.99,12345678);
+        Prodotto product1 = new Prodotto("paperino","pippo",599.99,12345678);
         //Stampo l'oggetto completo
         System.out.println("Oggetto completo" + " " + product1);
         //Stampo il codice del prodotto
@@ -14,8 +14,5 @@ public class Main {
         System.out.println("Prezzo con iva" + " " + product1.getPriceWithVat());
         //Stampo nome esteso del prodotto
         System.out.println("Nome completo" + " " + product1.getFullName());
-
-
-        Conto conto1 = new Conto(123,"pippo",10);
     }
 }
