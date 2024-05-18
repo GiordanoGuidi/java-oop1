@@ -24,8 +24,5 @@ public class Main {
 
         //Stampo l'oggetto completo
         System.out.println("******* Oggetto completo" + " " + product1);
-
-
-
     }
 }

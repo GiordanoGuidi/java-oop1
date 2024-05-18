@@ -22,13 +22,16 @@ public class Prodotto {
     //METODI
     //Genero un numero random
     int getRandomNumber(){
-        int randomInt = (int) (Math.random() * 999999)+1;
+        int randomInt = (int) (Math.random() * 9)+1;
         System.out.println(randomInt);
         return randomInt;
     }
     //Getter per l'attributo private code
-    public int getCode(){
-      return code;
+    public String getCode(){
+        /*Trasformo in codice in stringa e se il numero è
+        minore di 6 aggiungo tanti "0" fino a raggiungere
+        lunghezza 6 della stringa*/
+      return String.format("%06d", code);
     }
     //Getter per l'attributo name
     public String getName(){
