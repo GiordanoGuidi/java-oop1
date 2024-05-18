@@ -5,13 +5,12 @@ public class Prodotto {
 
     //ATTRIBUTI
     private int code;
-    String name;
-    String description;
-    double price;
-    int vatNumber;
+    private String name;
+    private String description;
+    private double price;
+    private int vatNumber;
 
-    //COSTRUTTORI
-
+    //COSTRUTTORe
     public Prodotto(String name,String description,double price,int vatNumber) {
         this.code = getRandomNumber();
         this.name = name;
@@ -31,6 +30,31 @@ public class Prodotto {
     public int getCode(){
       return code;
     }
+    //Getter per l'attributo name
+    public String getName(){
+        return name;
+    }
+    //Setter per l'attributo name
+    public void setName(String newName){
+        this.name =newName;
+    }
+    //Getter per l'attributo description
+    public String getDescription(){
+        return description;
+    }
+    //Setter per l'attributo description
+    public void setDescription(String newDescription){
+        this.description=newDescription;
+    }
+    //Getter per l'attributo vatNumber
+    public int getVatNumber(){
+        return this.vatNumber;
+    }
+    //Setter per l'attributo vatNumber
+    public void setVatNumber(int newVatNumber){
+        this.vatNumber=newVatNumber;
+    }
+
     //Metodo per avere il prezzo base
     public double getPrice(){
         return price;

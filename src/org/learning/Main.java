@@ -5,7 +5,7 @@ public class Main {
 
         Prodotto product1 = new Prodotto("paperino","pippo",599.99,12345678);
         //Stampo l'oggetto completo
-        System.out.println("Oggetto completo" + " " + product1);
+        System.out.println("****** Oggetto completo" + " " + product1);
         //Stampo il codice del prodotto
         System.out.println("Codice prodotto" + " " + product1.getCode());
         //Stampo il prezzo base
@@ -14,5 +14,18 @@ public class Main {
         System.out.println("Prezzo con iva" + " " + product1.getPriceWithVat());
         //Stampo nome esteso del prodotto
         System.out.println("Nome completo" + " " + product1.getFullName());
+
+        //Modifico il nome del prodotto
+        product1.setName("Giordano");
+        //Modifico il numero di partita iva
+        product1.setVatNumber(1234567890);
+        //Modifico la descrizione del prodotto
+        product1.setDescription("Frigorifero fantastico");
+
+        //Stampo l'oggetto completo
+        System.out.println("******* Oggetto completo" + " " + product1);
+
+
+
     }
 }
