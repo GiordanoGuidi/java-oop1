@@ -21,6 +21,7 @@ public class Bank {
         System.out.println("Uscire");
         //assegno alla variabile action il valore scelto dall'utente
         action= scanner.nextLine();
+
         /*Se la scelta è diversa da quelle richiest stampo
          un messaggio di errore*/
         if (!action.equals("Versare denaro")
@@ -35,6 +36,7 @@ public class Bank {
             //Eseguo il metodo passando come parametro la variabile withdrawal
             conto1.withdrawMoney(withdrawal);
         }
+
         //Se sceglie di versare denaro eseguo questo codice
         else if (action.equals("Versare denaro")){
             System.out.println("Quanto vuole versare?");

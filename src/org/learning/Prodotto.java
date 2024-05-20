@@ -10,7 +10,7 @@ public class Prodotto {
     private double price;
     private int vatNumber;
 
-    //COSTRUTTORe
+    //COSTRUTTORE
     public Prodotto(String name,String description,double price,int vatNumber) {
         this.code = getRandomNumber();
         this.name = name;
