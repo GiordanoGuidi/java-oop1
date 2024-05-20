@@ -8,15 +8,15 @@ public class Prodotto {
     private String name;
     private String description;
     private double price;
-    private int vatNumber;
+    private double vat;
 
     //COSTRUTTORE
-    public Prodotto(String name,String description,double price,int vatNumber) {
+    public Prodotto(String name,String description,double price) {
         this.code = getRandomNumber();
         this.name = name;
         this.description = description;
         this.price = price;
-        this.vatNumber = vatNumber;
+        this.vat = 0.22;
     }
 
     //METODI
@@ -49,13 +49,13 @@ public class Prodotto {
     public void setDescription(String newDescription){
         this.description=newDescription;
     }
-    //Getter per l'attributo vatNumber
-    public int getVatNumber(){
-        return this.vatNumber;
+    //Getter per l'attributo vat
+    public double getVat(){
+        return this.vat;
     }
-    //Setter per l'attributo vatNumber
-    public void setVatNumber(int newVatNumber){
-        this.vatNumber=newVatNumber;
+    //Setter per l'attributo vat
+    public void setVat(double newVa){
+        this.vat=newVa;
     }
 
     //Metodo per avere il prezzo base
@@ -64,8 +64,9 @@ public class Prodotto {
     }
     //Metodo per calcolare il prezzo compreso di iva
     public double getPriceWithVat(){
-        double iva = price*22 /100;
-        double priceWithVat = price + iva;
+
+        double ivaAmount = price * vat;
+        double priceWithVat = price + ivaAmount;
         return priceWithVat;
     }
     //Metodo per avere nome esteso
@@ -79,6 +80,6 @@ public class Prodotto {
     @Override
     public String toString() {
         return "Prodotto[codice=" + code + ", nome=" + name + ", " +
-                "description=" + description + ", price=" + price + "vatNumber=" + vatNumber +"]";
+                "description=" + description + ", price=" + price + "vat=" + vat +"]";
     }
 }
